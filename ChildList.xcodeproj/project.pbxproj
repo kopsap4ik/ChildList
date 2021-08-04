@@ -11,6 +11,10 @@
 		D974EA9326BAA4C700B8E7D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EA9226BAA4C700B8E7D3 /* ContentView.swift */; };
 		D974EA9526BAA4C900B8E7D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D974EA9426BAA4C900B8E7D3 /* Assets.xcassets */; };
 		D974EA9826BAA4C900B8E7D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D974EA9726BAA4C900B8E7D3 /* Preview Assets.xcassets */; };
+		D974EAA026BAA5B900B8E7D3 /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EA9F26BAA5B900B8E7D3 /* NameTextField.swift */; };
+		D974EAA226BAA9A100B8E7D3 /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAA126BAA9A100B8E7D3 /* Parent.swift */; };
+		D974EAA526BAAABC00B8E7D3 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAA426BAAABC00B8E7D3 /* ParentView.swift */; };
+		D974EAAB26BB1A6400B8E7D3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAAA26BB1A6400B8E7D3 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		D974EA9426BAA4C900B8E7D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D974EA9726BAA4C900B8E7D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D974EA9926BAA4C900B8E7D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D974EA9F26BAA5B900B8E7D3 /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
+		D974EAA126BAA9A100B8E7D3 /* Parent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parent.swift; sourceTree = "<group>"; };
+		D974EAA426BAAABC00B8E7D3 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
+		D974EAAA26BB1A6400B8E7D3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,9 @@
 			children = (
 				D974EA9026BAA4C700B8E7D3 /* ChildListApp.swift */,
 				D974EA9226BAA4C700B8E7D3 /* ContentView.swift */,
+				D974EAA626BAAAC200B8E7D3 /* Views */,
+				D974EAA326BAAA6100B8E7D3 /* Models */,
+				D974EAAC26BB287D00B8E7D3 /* Helpers */,
 				D974EA9426BAA4C900B8E7D3 /* Assets.xcassets */,
 				D974EA9926BAA4C900B8E7D3 /* Info.plist */,
 				D974EA9626BAA4C900B8E7D3 /* Preview Content */,
@@ -67,6 +78,31 @@
 				D974EA9726BAA4C900B8E7D3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D974EAA326BAAA6100B8E7D3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D974EAA126BAA9A100B8E7D3 /* Parent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D974EAA626BAAAC200B8E7D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D974EAA426BAAABC00B8E7D3 /* ParentView.swift */,
+				D974EA9F26BAA5B900B8E7D3 /* NameTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D974EAAC26BB287D00B8E7D3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D974EAAA26BB1A6400B8E7D3 /* ImagePicker.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D974EAA226BAA9A100B8E7D3 /* Parent.swift in Sources */,
+				D974EAA026BAA5B900B8E7D3 /* NameTextField.swift in Sources */,
 				D974EA9326BAA4C700B8E7D3 /* ContentView.swift in Sources */,
+				D974EAAB26BB1A6400B8E7D3 /* ImagePicker.swift in Sources */,
 				D974EA9126BAA4C700B8E7D3 /* ChildListApp.swift in Sources */,
+				D974EAA526BAAABC00B8E7D3 /* ParentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
