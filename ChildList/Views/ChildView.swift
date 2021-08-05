@@ -18,18 +18,30 @@ struct ChildView: View {
                 .fill(Color.init(UIColor.white))
                 .frame(width: UIScreen.main.bounds.width - 30, height: 70)
             
+            HStack {
                 VStack(alignment: .leading, spacing: 10){
-                    TextField("Имя...", text: $child.name)
-                    TextField("Возраст...", text: $child.age)
-                        .keyboardType(.numberPad)
-                }
-                .font(.title3)
+                        TextField("Имя...", text: $child.name)
+                        TextField("Возраст...", text: $child.age)
+                            .keyboardType(.numberPad)
+                    }
+                    .font(.title3)
                 .padding(.horizontal, 30.0)
                 
+                Button(action: {
+                    print("Remove child pressed")
+                }) {
+                    Text("X")
+                        .font(.system(size: 30, weight: .bold, design: .rounded))
+                        .frame(width: 30, height: 30, alignment: .center)
+                        .foregroundColor(Color.white)
+                        .background(Color.red)
+                        .clipShape(Circle())
+                }
+                .padding(.trailing, 30)
+            }
+                
         }
-        .background(Color(UIColor.systemYellow)
-                        .ignoresSafeArea()
-        )
+//        .background(Color(UIColor.systemYellow).ignoresSafeArea())
 
     }
 }

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    private var childManager = ChildManager()
+    @State private var countChilds = 0
+    
     var body: some View {
             VStack {
                 
@@ -15,7 +18,21 @@ struct ContentView: View {
                     ParentView(parent: Parent())
                 
 //                VStack() {
-                    AddChildButtonView()
+//                if childManager.countChild < 5 { AddChildButtonView()} else { }
+                if countChilds < 5 {
+                    AddChildButtonView(countChildren: $countChilds)
+                } else { }
+                
+                Button(action: {
+                    countChilds -= 1
+                    childManager.countChild += 1
+                    print(childManager.countChild)
+                }, label: {
+                    Text("\(countChilds)")
+                })
+                .padding(.top, 20)
+                
+                
 //                }
 //                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
 //                .listRowInsets(EdgeInsets())

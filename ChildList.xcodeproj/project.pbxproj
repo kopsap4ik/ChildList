@@ -20,6 +20,7 @@
 		D974EAB426BC783400B8E7D3 /* PersonsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAB326BC783400B8E7D3 /* PersonsManager.swift */; };
 		D974EAB626BC79BB00B8E7D3 /* AddChildButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAB526BC79BB00B8E7D3 /* AddChildButtonView.swift */; };
 		D974EAB826BC810D00B8E7D3 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAB726BC810D00B8E7D3 /* TestView.swift */; };
+		D974EABA26BC9AED00B8E7D3 /* ChildManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAB926BC9AED00B8E7D3 /* ChildManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D974EAB326BC783400B8E7D3 /* PersonsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsManager.swift; sourceTree = "<group>"; };
 		D974EAB526BC79BB00B8E7D3 /* AddChildButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildButtonView.swift; sourceTree = "<group>"; };
 		D974EAB726BC810D00B8E7D3 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		D974EAB926BC9AED00B8E7D3 /* ChildManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				D974EAAA26BB1A6400B8E7D3 /* ImagePicker.swift */,
 				D974EAAD26BB2F9F00B8E7D3 /* DataManager.swift */,
+				D974EAB926BC9AED00B8E7D3 /* ChildManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				D974EAB226BC73EC00B8E7D3 /* Child.swift in Sources */,
 				D974EAB826BC810D00B8E7D3 /* TestView.swift in Sources */,
 				D974EAA226BAA9A100B8E7D3 /* Parent.swift in Sources */,
+				D974EABA26BC9AED00B8E7D3 /* ChildManager.swift in Sources */,
 				D974EAB026BC738800B8E7D3 /* ChildView.swift in Sources */,
 				D974EA9326BAA4C700B8E7D3 /* ContentView.swift in Sources */,
 				D974EAB626BC79BB00B8E7D3 /* AddChildButtonView.swift in Sources */,
