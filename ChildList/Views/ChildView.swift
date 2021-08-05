@@ -10,6 +10,7 @@ import SwiftUI
 struct ChildView: View {
     @State var child: Child
 //    @State var childs: [Child]
+    var removeChildren: RemoveChildButtonView
     
     var body: some View {
 
@@ -27,17 +28,20 @@ struct ChildView: View {
                     .font(.title3)
                 .padding(.horizontal, 30.0)
                 
-                Button(action: {
-                    print("Remove child pressed")
-                }) {
-                    Text("X")
-                        .font(.system(size: 30, weight: .bold, design: .rounded))
-                        .frame(width: 30, height: 30, alignment: .center)
-                        .foregroundColor(Color.white)
-                        .background(Color.red)
-                        .clipShape(Circle())
-                }
-                .padding(.trailing, 30)
+                removeChildren
+                    .padding(.trailing, 30)
+                
+//                Button(action: {
+//                    print("Remove child pressed")
+//                }) {
+//                    Text("X")
+//                        .font(.system(size: 30, weight: .bold, design: .rounded))
+//                        .frame(width: 30, height: 30, alignment: .center)
+//                        .foregroundColor(Color.white)
+//                        .background(Color.red)
+//                        .clipShape(Circle())
+//                }
+//                .padding(.trailing, 30)
             }
                 
         }
@@ -48,6 +52,7 @@ struct ChildView: View {
 
 struct ChildView_Previews: PreviewProvider {
     static var previews: some View {
-        ChildView(child: Child())
+        ChildView(child: Child(),
+                  removeChildren: RemoveChildButtonView(countChildren: .constant(0)))
     }
 }

@@ -12,7 +12,6 @@ struct AddChildButtonView: View {
     
     var body: some View {
         HStack {
-//            Spacer()
             Button(action: {
                 print("Add child pressed")
                 countChildren += 1
@@ -24,7 +23,6 @@ struct AddChildButtonView: View {
                     .background(Color.orange)
                     .clipShape(Circle())
             }
-//            Spacer()
         }
     }
 }

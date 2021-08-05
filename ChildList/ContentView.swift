@@ -38,7 +38,10 @@ struct ContentView: View {
 //                .listRowInsets(EdgeInsets())
 //                .background(Color(UIColor.systemGroupedBackground))
                 
-                    if true { ChildView(child: Child(name: "asasd", age: "20"))} else { }
+                    if true {
+                        ChildView(child: Child(name: "asasd", age: "20"),
+                                  removeChildren: RemoveChildButtonView(countChildren: $countChilds))
+                    } else { }
                 
                     Spacer()
             }
