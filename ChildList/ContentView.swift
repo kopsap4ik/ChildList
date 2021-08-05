@@ -8,28 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var username: String = ""
-        
-        var body: some View {
-            
-//            VStack(alignment: .leading) {
-//                NameTextField(username: "name")
-//            }.padding()
-            
-            VStack(alignment: .trailing, spacing: 20) {
-//                        HStack {
-//                            Spacer()
-                            EditButton()
-//                        }
+    var body: some View {
+            VStack {
                 
-            ParentView(parent: Parent())
+
+                    ParentView(parent: Parent())
+                
+//                VStack() {
+                    AddChildButtonView()
+//                }
+//                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+//                .listRowInsets(EdgeInsets())
+//                .background(Color(UIColor.systemGroupedBackground))
+                
+                    if true { ChildView(child: Child(name: "asasd", age: "20"))} else { }
+                
+                    Spacer()
             }
-            .padding()
-        }
+            .background(Color(UIColor.systemYellow)
+                            .ignoresSafeArea()
+            )
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+        }
     }
 }

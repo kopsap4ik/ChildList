@@ -11,7 +11,7 @@ import SwiftUI
 struct ChildListApp: App {
     var body: some Scene {
         WindowGroup {
-            ParentView(parent: Parent())
+            ContentView()
         }
     }
 }
