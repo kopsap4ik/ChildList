@@ -9,17 +9,15 @@ import SwiftUI
 
 struct ParentView: View {
     @State var parent: Parent
-    
     @State private var showingImagePicker = false
-    @State private var inputImage = UIImage(systemName: "person.fill.viewfinder") ?? UIImage()
+    @State private var parentLogo: UIImage?
     
     var body: some View {
         VStack {
             Section {
                 
                 HStack() {
-                    
-                    Image(uiImage: inputImage)
+                    Image(uiImage: parent.image)
                         .resizable()
                         .frame(width: 70, height: 70)
                         .padding()
@@ -28,44 +26,15 @@ struct ParentView: View {
                         }
                     
                     VStack(alignment: .leading, spacing: 10){
-                        TextField("Ваше имя...", text: $parent.name)
-                        TextField("Ваш возраст...", text: $parent.age)
+                        TextField("Фамилия...", text: $parent.secondName)
+                        TextField("Имя...", text: $parent.firstName)
+                        TextField("Отчество...", text: $parent.patronymicName)
+                        TextField("Возраст...", text: $parent.age)
+                            .keyboardType(.numberPad)
                     }
-                    .font(.title)
+                    .font(.title3)
                 }
                 .padding(.horizontal, -10.0)
-                
-
-                
-                //                            VStack(alignment: .leading, spacing: 10){
-                //                                Text("Фамилия")
-                //                                Text("Имя")
-                //                                Text("Отчество")
-                //                                Text("Возраст")
-                //                            }
-                //                            .foregroundColor(.gray)
-                
-                
-                
-                
-                
-                
-                
-                //                HStack() {
-                //                    Image(systemName: "person.crop.circle")
-                //                        .resizable()
-                //                        .frame(width: 70, height: 70)
-                //                        .foregroundColor(.orange)
-                //
-                //                    VStack(alignment: .leading, spacing: 10){
-                //                        TextField("Введите имя...", text: $parent.name)
-                //                        TextField("Введите возраст...", text: $parent.age)
-                //                    }
-                //                    .font(.title2)
-                //
-                //                }
-                //
-                //
             }
             .padding(.bottom, 10.0)
             .padding(.horizontal, 20.0)
@@ -73,36 +42,36 @@ struct ParentView: View {
             
             
             Form {
-                HStack() {
-                    Image(systemName: "person.crop.circle")
-                        .resizable()
-                        .frame(width: 70, height: 70)
-                        .foregroundColor(.orange)
-                    
-                    //                    VStack(alignment: .leading){
-                    //
-                    //                        HStack {
-                    VStack(alignment: .leading, spacing: 10){
-                        Text("Фамилия")
-                        Text("Имя")
-                        Text("Отчество")
-                        Text("Возраст")
-                    }
-                    .foregroundColor(.gray)
-                    
-                    VStack(alignment: .leading, spacing: 10){
-                        TextField("Введите фамилию...", text: $parent.name)
-                        TextField("Введите имя...", text: $parent.name)
-                        TextField("Введите отчество...", text: $parent.name)
-                        TextField("Введите возраст...", text: $parent.age)
-                    }
-                    
-                    //                        }
-                    
-                    //                    }
-                    //                    .font(.title3)
-                }
-                .padding(.horizontal, -10.0)
+//                HStack() {
+//                    Image(systemName: "person.crop.circle")
+//                        .resizable()
+//                        .frame(width: 70, height: 70)
+//                        .foregroundColor(.orange)
+//                    
+//                    //                    VStack(alignment: .leading){
+//                    //
+//                    //                        HStack {
+//                    VStack(alignment: .leading, spacing: 10){
+//                        Text("Фамилия")
+//                        Text("Имя")
+//                        Text("Отчество")
+//                        Text("Возраст")
+//                    }
+//                    .foregroundColor(.gray)
+//                    
+//                    VStack(alignment: .leading, spacing: 10){
+//                        TextField("Введите фамилию...", text: $parent.secondName)
+//                        TextField("Введите имя...", text: $parent.firstName)
+//                        TextField("Введите отчество...", text: $parent.patronymicName)
+//                        TextField("Введите возраст...", text: $parent.age)
+//                    }
+//                    
+//                    //                        }
+//                    
+//                    //                    }
+//                    //                    .font(.title3)
+//                }
+//                .padding(.horizontal, -10.0)
                 
                 // childrens
                 Section {
@@ -122,7 +91,7 @@ struct ParentView: View {
             
         }
         .sheet(isPresented: $showingImagePicker) {
-            ImagePicker(image: $inputImage)
+            ImagePicker(image: $parent.image)
         }
     }
     
@@ -130,6 +99,6 @@ struct ParentView: View {
 
 struct ParentView_Previews: PreviewProvider {
     static var previews: some View {
-        ParentView(parent: Parent(name: "Иван Петров", age: "30 лет"))
+        ParentView(parent: Parent())
     }
 }

@@ -22,7 +22,7 @@ struct ContentView: View {
                             EditButton()
 //                        }
                 
-            ParentView(parent: Parent(name: "asdsad as dasd", age: "40"))
+            ParentView(parent: Parent())
             }
             .padding()
         }

@@ -15,6 +15,7 @@
 		D974EAA226BAA9A100B8E7D3 /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAA126BAA9A100B8E7D3 /* Parent.swift */; };
 		D974EAA526BAAABC00B8E7D3 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAA426BAAABC00B8E7D3 /* ParentView.swift */; };
 		D974EAAB26BB1A6400B8E7D3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAAA26BB1A6400B8E7D3 /* ImagePicker.swift */; };
+		D974EAAE26BB2F9F00B8E7D3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAAD26BB2F9F00B8E7D3 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D974EAA126BAA9A100B8E7D3 /* Parent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parent.swift; sourceTree = "<group>"; };
 		D974EAA426BAAABC00B8E7D3 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		D974EAAA26BB1A6400B8E7D3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		D974EAAD26BB2F9F00B8E7D3 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				D974EAAA26BB1A6400B8E7D3 /* ImagePicker.swift */,
+				D974EAAD26BB2F9F00B8E7D3 /* DataManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				D974EAA226BAA9A100B8E7D3 /* Parent.swift in Sources */,
 				D974EAA026BAA5B900B8E7D3 /* NameTextField.swift in Sources */,
 				D974EA9326BAA4C700B8E7D3 /* ContentView.swift in Sources */,
+				D974EAAE26BB2F9F00B8E7D3 /* DataManager.swift in Sources */,
 				D974EAAB26BB1A6400B8E7D3 /* ImagePicker.swift in Sources */,
 				D974EA9126BAA4C700B8E7D3 /* ChildListApp.swift in Sources */,
 				D974EAA526BAAABC00B8E7D3 /* ParentView.swift in Sources */,

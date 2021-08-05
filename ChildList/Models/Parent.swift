@@ -9,7 +9,9 @@ import UIKit
 
 struct Parent {
     var image = UIImage(systemName: "person.fill.viewfinder") ?? UIImage()
-    var name = ""
+    var secondName = ""
+    var firstName = ""
+    var patronymicName = ""
     var age = ""
 }
 
