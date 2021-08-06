@@ -13,12 +13,15 @@ struct ParentView: View {
     @State private var parentLogo: UIImage?
     
     var body: some View {
-        //        VStack {
-        //            Section {
         ZStack {
             RoundedRectangle(cornerRadius: 30)
-                .fill(Color.init(UIColor.white))
-                .frame(width: UIScreen.main.bounds.width - 30, height: 200)
+                .fill(Color.init(UIColor.red))
+                .frame(minWidth: 0,
+                       maxWidth: .infinity,
+                       minHeight: 200,
+                       maxHeight: 200,
+                       alignment: .center)
+                .padding()
             
             
             HStack() {
@@ -39,11 +42,8 @@ struct ParentView: View {
                 }
                 .font(.title3)
             }
-//            .padding(.horizontal, 10.0)
-            //            }
             .padding(.bottom, 10.0)
             .padding(.horizontal, 20.0)
-            //        }
             .sheet(isPresented: $showingImagePicker) {
                 ImagePicker(image: $parent.image)
             }
