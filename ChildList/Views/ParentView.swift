@@ -15,11 +15,11 @@ struct ParentView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 30)
-                .fill(Color.init(UIColor.red))
+                .fill(Color.init(UIColor.white))
                 .frame(minWidth: 0,
                        maxWidth: .infinity,
-                       minHeight: 200,
-                       maxHeight: 200,
+                       minHeight: 180,
+                       maxHeight: 180,
                        alignment: .center)
                 .padding()
             
@@ -37,7 +37,7 @@ struct ParentView: View {
                     TextField("Фамилия...", text: $parent.secondName)
                     TextField("Имя...", text: $parent.firstName)
                     TextField("Отчество...", text: $parent.patronymicName)
-                    TextField("Возраст...", text: $parent.age)
+                    TextField("Возраст...", value: $parent.age, formatter: NumberFormatter())
                         .keyboardType(.numberPad)
                 }
                 .font(.title3)

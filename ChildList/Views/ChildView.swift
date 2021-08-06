@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ChildView: View {
-    @State var child: Child
-    @Binding var countChildren: Int
+    @Binding var child: Child
+//    var child: Child
+    var removeChild: () -> Void
     
     var body: some View {
         
@@ -26,14 +27,16 @@ struct ChildView: View {
             HStack {
                 VStack(alignment: .leading, spacing: 10){
                     TextField("Имя...", text: $child.name)
-                    TextField("Возраст...", text: $child.age)
+                    TextField("Возраст...", value: $child.age, formatter: NumberFormatter())
                         .keyboardType(.numberPad)
+//                    TextField("Возраст...", text: $child.age)
+//                        .keyboardType(.numberPad)
                 }
                 .font(.title3)
                 .padding(.horizontal, 30.0)
                 
                 Button(action: {
-                    countChildren -= 1
+                    removeChild()
                 }) {
                     Text("X")
                         .font(.system(size: 30, weight: .bold, design: .rounded))
@@ -46,13 +49,13 @@ struct ChildView: View {
             }
             
         }
-        .background(Color(UIColor.systemYellow).ignoresSafeArea())
+//        .background(Color(UIColor.systemYellow).ignoresSafeArea())
         
     }
 }
 
 struct ChildView_Previews: PreviewProvider {
     static var previews: some View {
-        ChildView(child: Child(), countChildren: .constant(0))
+        ChildView(child: .constant(Child()), removeChild: {})
     }
 }

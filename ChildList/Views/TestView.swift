@@ -7,59 +7,72 @@
 
 import SwiftUI
 
+//class ElementHolder: ObservableObject {
+//
+//    @Published var elements: [String]
+//
+//    init(elements: [String]) {
+//        self.elements = elements
+//    }
+//}
+
+struct TestPerson: Identifiable {
+    var id = UUID()
+    var name: String
+}
+
 struct TestView: View {
-    @State private var enableLogging = false
-    @State private var selectedColor = "Red"
-    @State private var colors = ["Red", "Green", "Blue"]
-    @State private var title = "false"
+    //    @State var elements: [TestPerson] = [
+    //        TestPerson(name: "ooooo"),
+    //        TestPerson(name: "aaaaa"),
+    //        TestPerson(name: "ggggg")
+    //    ]
+    
+    @State var elements: [String] = [
+        "ooooo",
+        "aaaaa",
+        "ggggg"
+    ]
     
     var body: some View {
-        
-        NavigationView {
-            Form {
-                VStack(alignment: .leading) {
-                    Text("Testing a title").font(.headline)
-                    Text("Testing a subheadline").font(.subheadline)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                .listRowInsets(EdgeInsets())
-                .background(Color(UIColor.systemGroupedBackground))
-                        
-                Section(header: Text("Title and Category").bold()) {
-                   TextField("Title", text: $title)
-                   TextField("Category", text: $title)
-                }
+                
+        VStack {
+            
+            
+            ForEach(elements.indices, id:\.self ){ index in
+                SecondView(element: Binding(
+                    get: { return elements[index] },
+                    set: { (newValue) in return self.elements[index] = newValue}
+                  ),
+                onDelete: { elements.remove(at: index)}
+                )
             }
-            .navigationTitle("Test Form")
+
+            
         }
-        
-//        VStack {
-//            Form {
-//                Section(footer: Text("Note: Enabling logging may slow down the app")) {
-//                    Picker("Select a color", selection: $selectedColor) {
-//                        ForEach(colors, id: \.self) {
-//                            Text($0)
-//                        }
-//                    }
-//                    .pickerStyle(SegmentedPickerStyle())
-//
-//                    Toggle("Enable Logging", isOn: $enableLogging)
-//                }
-//
-//                Section {
-//                    Button("Save changes") {
-//                        // activate theme!
-//                    }
-//                }
-//            }
-//            if /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/ {
-//                Button("Save changes") {
-//                    // activate theme!
-//                }
-//            } else {
-//                /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
-//            }
-//        }
+    }
+    
+    func delete(offset: Int) {
+        DispatchQueue.main.async {
+            self.elements.remove(at: offset)
+        }
+    }
+}
+
+struct SecondView: View {
+    @Binding var element: String
+    var onDelete: () -> ()
+    
+    var body: some View {
+        HStack {
+            //            if index < elements.count{
+            //            Text(element)
+            TextField("", text: $element)
+            Button(action: { onDelete() }) {
+                Text("delete")
+            }
+            //            }
+        }
     }
 }
 
@@ -68,3 +81,24 @@ struct TestView_Previews: PreviewProvider {
         TestView()
     }
 }
+
+//extension Binding where Value: MutableCollection
+//{
+//  subscript(safe index: Value.Index) -> Binding<Value.Element>
+//  {
+//    // Get the value of the element when we first create the binding
+//    // Thus we have a 'placeholder-value' if `get` is called when the index no longer exists
+//    let safety = wrappedValue[index]
+//    return Binding<Value.Element>(
+//      get: {
+//        guard self.wrappedValue.indices.contains(index)
+//          else { return safety } //If this index no longer exists, return a dummy value
+//        return self.wrappedValue[index]
+//    },
+//      set: { newValue in
+//        guard self.wrappedValue.indices.contains(index)
+//          else { return } //If this index no longer exists, do nothing
+//        self.wrappedValue[index] = newValue
+//    })
+//  }
+//}

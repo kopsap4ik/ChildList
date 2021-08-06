@@ -21,6 +21,7 @@
 		D974EAB626BC79BB00B8E7D3 /* AddChildButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAB526BC79BB00B8E7D3 /* AddChildButtonView.swift */; };
 		D974EAB826BC810D00B8E7D3 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAB726BC810D00B8E7D3 /* TestView.swift */; };
 		D974EABA26BC9AED00B8E7D3 /* ChildManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAB926BC9AED00B8E7D3 /* ChildManager.swift */; };
+		D974EAC226BDA29900B8E7D3 /* test2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974EAC126BDA29900B8E7D3 /* test2View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D974EAB526BC79BB00B8E7D3 /* AddChildButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildButtonView.swift; sourceTree = "<group>"; };
 		D974EAB726BC810D00B8E7D3 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		D974EAB926BC9AED00B8E7D3 /* ChildManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildManager.swift; sourceTree = "<group>"; };
+		D974EAC126BDA29900B8E7D3 /* test2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				D974EAB526BC79BB00B8E7D3 /* AddChildButtonView.swift */,
 				D974EAAF26BC738800B8E7D3 /* ChildView.swift */,
 				D974EAB726BC810D00B8E7D3 /* TestView.swift */,
+				D974EAC126BDA29900B8E7D3 /* test2View.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			files = (
 				D974EAB426BC783400B8E7D3 /* PersonsManager.swift in Sources */,
 				D974EAB226BC73EC00B8E7D3 /* Child.swift in Sources */,
+				D974EAC226BDA29900B8E7D3 /* test2View.swift in Sources */,
 				D974EAB826BC810D00B8E7D3 /* TestView.swift in Sources */,
 				D974EAA226BAA9A100B8E7D3 /* Parent.swift in Sources */,
 				D974EABA26BC9AED00B8E7D3 /* ChildManager.swift in Sources */,

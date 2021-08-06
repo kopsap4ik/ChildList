@@ -12,7 +12,7 @@ struct Parent {
     var secondName = ""
     var firstName = ""
     var patronymicName = ""
-    var age = ""
+    var age: Int?
 }
 
 //final class PersonsManager {

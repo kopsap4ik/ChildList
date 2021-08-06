@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct AddChildButtonView: View {
-    @Binding var countChildren: Int
+    var addChild: () -> Void
     
     var body: some View {
         HStack {
             Button(action: {
-                print("Add child pressed")
-                countChildren += 1
+                addChild()
             }) {
                 Text("+")
                     .font(.system(size: 46, weight: .bold, design: .rounded))
@@ -29,6 +28,6 @@ struct AddChildButtonView: View {
 
 struct AddChildButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        AddChildButtonView(countChildren: .constant(0))
+        AddChildButtonView(addChild: {})
     }
 }
