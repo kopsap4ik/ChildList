@@ -18,8 +18,8 @@ struct ParentView: View {
                 .fill(Color.init(UIColor.white))
                 .frame(minWidth: 0,
                        maxWidth: .infinity,
-                       minHeight: 180,
-                       maxHeight: 180,
+                       minHeight: 160,
+                       maxHeight: 160,
                        alignment: .center)
                 .padding()
             

@@ -9,28 +9,25 @@ import SwiftUI
 
 struct ChildView: View {
     @Binding var child: Child
-//    var child: Child
     var removeChild: () -> Void
     
     var body: some View {
-        
         ZStack {
             RoundedRectangle(cornerRadius: 15)
                 .fill(Color.init(UIColor.white))
                 .frame(minWidth: 0,
                        maxWidth: .infinity,
-                       minHeight: 70,
-                       maxHeight: 70,
+                       minHeight: 80,
+                       maxHeight: 80,
                        alignment: .center)
-                .padding()
+                .padding(.horizontal, 15)
+                .padding(.vertical, 10)
             
             HStack {
                 VStack(alignment: .leading, spacing: 10){
                     TextField("Имя...", text: $child.name)
                     TextField("Возраст...", value: $child.age, formatter: NumberFormatter())
                         .keyboardType(.numberPad)
-//                    TextField("Возраст...", text: $child.age)
-//                        .keyboardType(.numberPad)
                 }
                 .font(.title3)
                 .padding(.horizontal, 30.0)
@@ -49,8 +46,6 @@ struct ChildView: View {
             }
             
         }
-//        .background(Color(UIColor.systemYellow).ignoresSafeArea())
-        
     }
 }
 

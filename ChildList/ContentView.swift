@@ -15,21 +15,18 @@ struct ContentView: View {
             ParentView(parent: Parent())
             
             if childs.count < 5 {
-                AddChildButtonView(addChild: {
-                    childs.append(Child())
-                    print(childs)
-                })
+                AddChildButtonView(addChild: { childs.append(Child()) })
             }
-
+            
             ForEach(childs.indices, id: \.self) { index in
                 ChildView(child: Binding(
                     get: { return childs[index] },
                     set: { (newValue) in return childs[index] = newValue}
                 ),
-                          removeChild: { childs.remove(at: index)}
+                removeChild: { childs.remove(at: index)}
                 )
             }
-
+            
             Spacer()
         }
         .background(Color(UIColor.systemYellow)
