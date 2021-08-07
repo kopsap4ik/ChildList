@@ -9,4 +9,6 @@
 Когда пользователь добавил 5 детей — кнопка "+" исчезает и больше недоступна.\
 Так же напротив каждого ребенка есть кнопка "Удалить", при нажатии на которую соответствующая запись удаляется.
 
-![MainScreen](https://user-images.githubusercontent.com/61139898/128611004-379bc790-fffb-421f-bd0f-c58174d8f98d.PNG)
+<p align="center">
+  <img width="500" alt="MainScreen" src="https://user-images.githubusercontent.com/61139898/128611004-379bc790-fffb-421f-bd0f-c58174d8f98d.PNG">
+</p>
